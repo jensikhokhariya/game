@@ -38,6 +38,7 @@ class _GamesState extends State<Games> {
           title: Text("Games"),
           centerTitle: true,
         ),
+        backgroundColor: Colors.black,
         body: Container(
           height: double.infinity,
           width: double.infinity,
@@ -56,26 +57,23 @@ class _GamesState extends State<Games> {
                     },
                     child: Container(
                       height: 200,
-                      width: 200,
-                      margin: EdgeInsets.all(10),
-                      child: Container(
-                        height: 90,
-                        width: 90,
-                        child: Column(
-                          children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(10),
-                              child: Container(
-                                height: 150,
-                                width: 150,
-                                child: Image.asset(
-                                  gname[index],
-                                  fit: BoxFit.cover,
-                                ),
+                      width: 90,
+                      child: Column(
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child: Container(
+                              height: 150,
+                              width: 150,
+                              child: Image.asset(
+                                gname[index],
+                                fit: BoxFit.cover,
                               ),
                             ),
-                          ],
-                        ),
+                          ),
+                          SizedBox(height: 10,),
+                          Text("${name[index]}",style: TextStyle(color: Colors.white),)
+                        ],
                       ),
                     ),
                   ),
